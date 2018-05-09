@@ -1,6 +1,6 @@
 package main.kotlin.com.yunikov.syntax
 
-class AdvancedKotlinUser(private val id: Long, private val email: String) {
+class AdvancedKotlinUser(private val id: Long, private val email: String?) {
 
     var firstName: String = ""
     get() = "First name : $field"
@@ -10,7 +10,7 @@ class AdvancedKotlinUser(private val id: Long, private val email: String) {
 
     constructor(): this(0L, "")
 
-    override fun toString() = email
+    override fun toString() = email ?: ""
 }
 
 fun main(args: Array<String>) {

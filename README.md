@@ -1,2 +1,2 @@
 # kotlin-playground
-Examples of nice Kotlin features
+Place for experiments with Kotlin

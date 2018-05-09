@@ -1,6 +1,6 @@
 package main.kotlin.com.yunikov.syntax
 
-class AdvancedKotlinUser(private val id: Long) {
+class AdvancedKotlinUser(private val id: Long, private val email: String) {
 
     var firstName: String = ""
     get() = "First name : $field"
@@ -8,19 +8,16 @@ class AdvancedKotlinUser(private val id: Long) {
     var lastName: String = ""
     get() = "Last name : $field"
 
-    var email: String = ""
-
-    constructor(): this(0L)
+    constructor(): this(0L, "")
 
     override fun toString() = email
 }
 
 fun main(args: Array<String>) {
-    val newUser = AdvancedKotlinUser(1L)
+    val newUser = AdvancedKotlinUser(1L, email = "johny@yunikov.com")
     with(newUser) {
         firstName = "John"
         lastName = "Doe"
-        email = "johny@yunikov.com"
     }
 
     println("New user : $newUser")
